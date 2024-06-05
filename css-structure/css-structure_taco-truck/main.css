@@ -1,0 +1,11 @@
+.main {
+  background-color: var(--main-bg);
+  color: var(--main-text);
+}
+
+.menu-header {
+  background-color: var(--main-title-bg);
+  display: inline;
+  padding: 10px 10px;
+  align-self: flex-start;
+}

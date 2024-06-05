@@ -1,0 +1,26 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+  border: 3px solid black;
+}
+
+.list__card {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 15px;
+  padding: 15px;
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  align-items: stretch;
+  max-width: 300px;
+  border: 3px solid black;
+}
+
+/* .card-text {
+  padding-top: -10px;
+} */
