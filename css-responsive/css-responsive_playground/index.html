@@ -53,15 +53,17 @@
           </p>
           <div class="box box--five">
             <picture>
-              <source media="(min-width: 1200px)" src="./img/cat_large.jpg" />
-              <source media="(min-width: 600px)" src="./img/cat_medium.jpg" />
-              <img
-                src="./img/cat_small.jpg"
-                alt="fallback picture of small cat"
+              <source
+                media="(min-width: 1200px)"
+                srcset="./img/cat_large.jpg"
               />
+              <source
+                media="(min-width: 600px)"
+                srcset="./img/cat_medium.jpg"
+              />
+              <img src="./img/cat_small.jpg" alt="A single cat" />
             </picture>
             <!-- Perhaps you may want to use the <picture> Element here? -->
-            <img src="./img/cat_small.jpg" alt="A cat" />
           </div>
         </section>
       </section>
