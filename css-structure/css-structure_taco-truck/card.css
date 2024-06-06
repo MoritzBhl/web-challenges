@@ -11,16 +11,10 @@
   background-color: var(--card-bg);
   color: var(--card-text);
   border-radius: 15px;
-  padding: 15px;
-  padding-top: 5px;
+  padding: 5px 5px 55px 15px;
   max-width: 375px;
 }
 
-.text-parent {
-  display: flex;
-  flex-direction: column;
-}
-
 .card-text {
-  align-items: flex-end;
+  height: 0;
 }
