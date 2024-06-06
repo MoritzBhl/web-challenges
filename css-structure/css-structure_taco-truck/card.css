@@ -1,11 +1,10 @@
 .list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   gap: 10px;
-  padding-left: 0;
-  border: 3px solid black;
+  padding: 10px 0 0 0;
+  display: grid;
+  grid-template-columns: 375px 375px;
+  align-items: stretch;
 }
 
 .list__card {
@@ -14,13 +13,9 @@
   border-radius: 15px;
   padding: 15px;
   padding-top: 5px;
-  display: grid;
-  grid-template-columns: 300px 300px;
-  align-items: stretch;
-  max-width: 300px;
-  border: 3px solid black;
+  max-width: 375px;
 }
 
-/* .card-text {
-  padding-top: -10px;
-} */
+.card-text {
+  /* align-self: flex-end; */
+}
