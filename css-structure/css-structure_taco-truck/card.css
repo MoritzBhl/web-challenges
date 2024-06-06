@@ -16,6 +16,11 @@
   max-width: 375px;
 }
 
+.text-parent {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-text {
-  /* align-self: flex-end; */
+  align-items: flex-end;
 }
