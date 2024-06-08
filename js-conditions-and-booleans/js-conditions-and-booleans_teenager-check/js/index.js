@@ -4,7 +4,7 @@ const output = document.querySelector('[data-js="age-output"]');
 
 button.addEventListener("click", () => {
   const age = Number(input.value);
-  if (age > Number("0") && age <= Number("19")) {
+  if (age > 9 && age <= 19) {
     console.log("You are a teen.");
   } else {
     console.log("You are not a teen.");
