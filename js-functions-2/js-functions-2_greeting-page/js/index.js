@@ -37,16 +37,16 @@ function getGreeting() {
 
 function getDayColor() {
   const actualDay = new Date().getDay();
-  if (actualDay === 6) {
+  if (actualDay === 0 || actualDay === 6) {
     return (document.body.style.backgroundColor = "hotpink");
-  } else if (actualDay <= 5) {
-    return (document.body.style.backgroundColor = "lightblue");
   } else if (actualDay === 1) {
     return (document.body.style.backgroundColor = "darkgray");
   } else {
-    return (document.body.style.backgroundColor = "hotpink");
+    return (document.body.style.backgroundColor = "lightblue");
   }
 }
 
 display.textContent = getGreeting();
 document.body.style.backgroundColor = getDayColor();
+
+console.log(new Date().getDay());
