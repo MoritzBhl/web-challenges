@@ -14,7 +14,6 @@ addButton.addEventListener("click", () => {
   toastContainer.append(listItem);
   // Exercise: Append a new entry to the toast messages container
 });
-
 clearButton.addEventListener("click", () => {
   toastContainer.innerHTML = "";
   // Exercise: Clear the stack of toast messages
