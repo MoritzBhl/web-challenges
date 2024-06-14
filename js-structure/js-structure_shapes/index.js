@@ -7,10 +7,9 @@ console.clear();
 const root = document.getElementById("root");
 
 const circleElement = Circle();
-root.append(circleElement);
 
 const squareElement = Square();
-root.append(squareElement);
 
 const pentagonElement = Pentagon();
-root.append(pentagonElement);
+
+root.append(circleElement, squareElement, pentagonElement);
