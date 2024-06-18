@@ -2,6 +2,7 @@ console.clear();
 
 const form = document.querySelector("form");
 const output = form.querySelector("output");
+const errorElement = document.querySelector('[data-js="error"]');
 
 const operations = {
   add: (a, b) => a + b,
@@ -15,6 +16,7 @@ const operations = {
       return a / b;
     } catch (error) {
       console.log(`${error}`);
+      errorElement.textContent = error.message;
     }
   },
 };
