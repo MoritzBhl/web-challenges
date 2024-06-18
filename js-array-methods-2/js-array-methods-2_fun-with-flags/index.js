@@ -20,9 +20,11 @@ queryInput.addEventListener("input", (event) => {
   //   container.append(countryElement);
   // }
 
-  const foundCountries = countries.filter((country) =>
-    country.name.startsWith(searchString)
-  );
+  const foundCountries = countries.filter((country) => {
+    const countryNameLowerCase = country.name.toLowerCase();
+    const searchStringLowerCase = searchString.toLowerCase();
+    return countryNameLowerCase.startsWith(searchStringLowerCase);
+  });
 
   if (foundCountries.length > 0) {
     foundCountries.forEach((country) => {
