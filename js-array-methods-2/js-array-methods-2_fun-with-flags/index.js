@@ -33,10 +33,3 @@ queryInput.addEventListener("input", (event) => {
     });
   }
 });
-
-//Change the method from `find` to `filter`, to filter the countries to those which
-//name starts with the search string. Remember to change the variable name from
-//`foundCountry` to `foundCountries` to reflect that it now is an array.
-
-// Adapt the rendering of the found countries. You'll need to loop over the array of
-//`foundCountries`. Which array method can you use for that?
