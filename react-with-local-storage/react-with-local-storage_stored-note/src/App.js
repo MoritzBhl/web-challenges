@@ -5,7 +5,7 @@ import "./styles.css";
 import useLocalStorageState from "use-local-storage-state";
 
 export default function App() {
-  const [note, setNote] = useLocalStorageState({});
+  const [note, setNote] = useLocalStorageState("");
   const [font, setFont] = useLocalStorageState("system-ui");
 
   function handleNoteChange(newNote) {
