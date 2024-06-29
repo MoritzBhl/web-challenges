@@ -19,23 +19,17 @@ export default function App() {
   useEffect(() => {
     async function getISSCoords() {
       const response = await fetch(URL);
-      console.log();
       const data = await response.json();
       setCoords({ longitude: data.longitude, latitude: data.latitude });
     }
 
     getISSCoords();
+
     const interval = setInterval(handlerCount, 5000);
 
-    function removeInterval() {
+    return () => {
       clearInterval(interval);
-    }
-
-    return removeInterval;
-
-    // return () => {
-    //   clearInterval(interval);
-    // };
+    };
   }, [count]);
 
   return (
