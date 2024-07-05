@@ -1,4 +1,5 @@
 import { introduction, volumes } from "@/lib/data";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -23,6 +24,10 @@ export default function VolumeDetail() {
 
   return (
     <>
+      <Head>
+        <title>{slug}</title>
+        <meta name="viewport" content="initial-sclae=1.0,width=device-width" />
+      </Head>
       <Link href="/volumes">← All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>
