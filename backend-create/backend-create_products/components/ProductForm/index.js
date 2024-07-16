@@ -20,6 +20,9 @@ export default function ProductForm() {
       },
       body: JSON.stringify(productData),
     });
+    if (response.ok) {
+      mutate();
+    }
   }
 
   return (
