@@ -125,3 +125,56 @@ You can use the following commands:
 - `npm run start` to start a production server
 - `npm run test` to run the tests
 - `npm run lint` to run the linter
+
+### Add a `POST` route
+
+Switch to `./pages/api/products/index.js` and write the code for the `request.method` `POST` :
+
+- Use a `try...catch` block.
+- Try to:
+  - Save the product data submitted by the form - accessible in `request.body` - to a variable called `productData`.
+  - use `Product.create` with the `productData` to create a new document in our collection.
+  - _Wait_ until the new product was saved.
+  - Respond with a status `201` and the message `{ status: "Product created." }`.
+- If an error occurs:
+  - Log the error to the console.
+  - Respond with a status `400` and the message `{ error: error.message }`.
+
+Submitting the form will not yet work because the form does not know that you've created a `POST` route it can use.
+
+### Send a `POST` request
+
+Switch to `./components/ProductForm/index.js`:
+
+- There already is a `handleSubmit` function which creates a `productData` object with all relevant data.
+
+Your task is to fetch your new `POST` route and send the data to your database. After that use `mutate` from `useSWR` to refetch the data from the database.
+
+- call `useSWR` in your `ProductForm` component with the API endpoint and destructure the `mutate` method.
+- inside the handleSubmit function:
+  > 💡 Hint: have a look at the handout if you get stuck here.
+- send a "POST" request with `fetch` using the following options as the second argument
+
+```js
+{
+  method: "POST",
+headers: {
+  "Content-Type": "application/json",
+  },
+body: JSON.stringify(???),
+}
+```
+
+- use the productData from the form input as the body of the request
+- await the response of the fetch, if the fetch was successful, call the `mutate` method to trigger a data revalidation of the useSWR hooks
+
+Open [`localhost:3000/`](http://localhost:3000/) in your browser, submit a new fish and be happy about your shop being expanded!
+
+### Resources
+
+You can find the fish shop data in [this folder](./resources/).
+
+- The files are already in the correct structure for the app.
+  - `products.json` contains the data for the all fish,
+  - `reviews.json` contain the data for all reviews.
+- Import them into the correct collection of your MongoDB when you are asked to.
